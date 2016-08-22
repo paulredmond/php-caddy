@@ -13,7 +13,6 @@ VOLUME /srv
 WORKDIR /srv
 
 ADD Caddyfile /etc/Caddyfile
-ADD index.php /srv/index.php
 
 RUN chown -R www-data:www-data /srv
 
