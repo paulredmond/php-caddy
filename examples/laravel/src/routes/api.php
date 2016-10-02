@@ -15,8 +15,3 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
-
-Route::get('test', function () {
-	\Log::info('This is some info....');
-	return response()->json(['hello' => 'world']);
-});
