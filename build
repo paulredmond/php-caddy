@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+tag=$1
+if [ "$tag" = "" ]; then
+    echo Usage: $0 TAG
+    exit 1
+fi
+
+docker build -t registry.gitlab.com/paulredmond/php-caddy:$tag .
+docker push registry.gitlab.com/paulredmond/php-caddy:$tag
