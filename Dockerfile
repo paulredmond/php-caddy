@@ -1,4 +1,4 @@
-FROM php:7.0-fpm
+FROM php:7.1.1-fpm
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
@@ -9,7 +9,8 @@ RUN curl --silent --show-error --fail --location \
  	&& docker-php-ext-install mbstring pdo pdo_mysql
 
 EXPOSE 80 443 2015
-WORKDIR /srv
+
+WORKDIR /srv/app
 
 ADD Caddyfile /etc/Caddyfile
 
