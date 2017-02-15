@@ -8,3 +8,6 @@ fi
 
 docker build -t registry.gitlab.com/paulredmond/php-caddy:$tag .
 docker push registry.gitlab.com/paulredmond/php-caddy:$tag
+
+echo "Build $tag complete"
+echo "View builds at https://gitlab.com/paulredmond/php-caddy/container_registry"
